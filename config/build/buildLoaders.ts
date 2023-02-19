@@ -1,6 +1,6 @@
 import { RuleSetRule } from 'webpack';
 import ReactRefreshTypeScript from 'react-refresh-typescript';
-import { buildCssLoader } from './loaders/buildCssLoader';
+import { buildScssLoader } from './loaders/buildScssLoader';
 import { BuildOptions } from './types/config';
 import { buildSvgLoader } from './loaders/buildSvgLoader';
 
@@ -32,7 +32,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 
   const svgLoader = buildSvgLoader();
 
-  const sassLoader = buildCssLoader(isDev);
+  const sassLoader = buildScssLoader(isDev);
 
   const typescriptLoader = {
     test: /\.tsx?$/,

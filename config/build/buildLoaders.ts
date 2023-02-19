@@ -2,7 +2,7 @@ import { RuleSetRule } from 'webpack';
 import ReactRefreshTypeScript from 'react-refresh-typescript';
 import { buildScssLoader } from './loaders/buildScssLoader';
 import { BuildOptions } from './types/config';
-import { buildSvgLoader } from './loaders/buildSVGLoader';
+import { buildSvgLoader } from './loaders/buildSvgLoader';
 
 export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
   const babelLoader = {
